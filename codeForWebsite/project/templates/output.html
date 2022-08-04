@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Farm@Ease</title>
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Farm@Ease</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/predict">Predict Crop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://public.tableau.com/app/profile/farm/viz/AnalysisofCropYieldinIndia/Map">Dashboard<span class="sr-only"></span></a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- all inside a background! -->
+
+
+
+
+
+
+    <div class="alert alert-success glow" role="alert">
+        <h2 class="alert-heading text-center">Recommended Crop</h2>
+        <hr>
+        <ul>
+            <h4 class="text-center mt-3"><b>Based on the details filled in the form,the best crop/Vegetable/Fruit to grow is : <b style = "color:salmon;font-weight: bold; font-size:2rem;">{{predicted_crop}}</b> </h4>
+            </p>
+
+        </ul>
+        <hr>
+    </div>
+
+
+
+
+    <div class="container glow">
+        <p class="text-center mt-3"><b>After knowing the best crop which is grown,here are Suggestions on which the Farmers can work upon</b></p>
+    </div>
+
+
+    <div class="alert alert-success glow" role="alert">
+        <h2 class="alert-heading text-center">Suggestions</h2>
+        <hr>
+        <ul>
+            {% autoescape off %}
+            <p class="text-center mt-3"><b>{{suggestion}}</b></p>
+            {% endautoescape %}
+
+        </ul>
+        <hr>
+    </div>
+
+
+
+
+
+    <div class="col-md-12 text-center">
+        <a href="/">
+            <button id="singlebutton" name="singlebutton" class="btn btn-outline-success my-2 my-sm-0">Go Back</button>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

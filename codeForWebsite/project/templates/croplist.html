@@ -1,0 +1,11 @@
+{% load static %}
+
+<html>
+    <body>
+        {% for image_name, crop, state in everything %}
+            <img src="{{image_name}}" alt="image" />
+            <h4> {{crop}} </h4>
+            <h4> {{state}} </h4>
+        {% endfor %}
+    </body>
+</html>
